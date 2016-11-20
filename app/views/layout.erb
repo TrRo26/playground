@@ -12,11 +12,23 @@
 
   <div class="container_main"><center>
     <h1>- Random As Hell -</h1>
-    <p>[ A site where you can post whatever you want as long as it's random ]</p></center>
+    <p>[ ** Random Stuff ** ]</p></center>
   </div>
 
   <nav class="navig"><br><center>
     <a href="/">home</a>
+      &nbsp | &nbsp
+    <% if logged_in? %>
+      <%= current_user.username %>
+      <form action="/sessions" method="post"><br>
+        <input type="submit" value="logout">
+        <input type="hidden" name="_method" value="delete">
+      </form>
+    <% else %>
+      <a href="/users/new">create account</a>
+        &nbsp | &nbsp
+      <a href="/sessions/new">login</a>
+    <% end %>
     </center>
   </nav>
 

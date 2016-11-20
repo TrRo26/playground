@@ -24,3 +24,7 @@
 th {
   text-align: left;
 }
+
+input {
+    display: inline-block;
+}

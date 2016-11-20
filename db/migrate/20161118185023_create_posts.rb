@@ -1,6 +1,6 @@
 class CreatePosts < ActiveRecord::Migration
   def change
-    create_table :post do |t|
+    create_table :posts do |t|
       t.string :title, null: false, unique: true
       t.string :body, null: false
       t.integer :user_id
