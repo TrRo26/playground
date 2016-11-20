@@ -1,2 +1,18 @@
-<br><br><br>
-<center><h3>MAIN PAGE</h3></center>
+<br>
+<% if logged_in? %>
+  <center><a href="/posts/new">Create New Post</a></center>
+<% end %>
+
+<br>
+<div class="borderless">
+  <h3>Posts:</h3>
+</div>
+
+<% @posts.reverse.each do |post| %>
+  <div class="container"><br>
+    <h3><a href="/posts/<%= post.id %>/show"> <%= post.title %> </a></h3>
+  </div>
+<% end %>
+
+
+

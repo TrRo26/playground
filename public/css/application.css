@@ -13,6 +13,12 @@
   border: 1px solid gray;
 }
 
+.borderless {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+}
+
 .navig {
   margin: 20px auto;
   width: 600px;
